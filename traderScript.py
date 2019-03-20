@@ -26,7 +26,7 @@ def save_img(data, name):
     plt.savefig('/home/jonah/jonahsite/trader/static/trader/img/' + name + '.png', bbox_inches = 'tight', pad_inches = 0)
 
 def get_data(symbols):
-    ts = TimeSeries(key='PBEK7SZPONK01WUK', output_format='pandas')
+    ts = TimeSeries(key=os.environ['AV_API_KEY'], output_format='pandas')
     loopIndex = 0
     for s in symbols:
         # API asks for only 5 requests a minute, that is what this is for
