@@ -52,7 +52,7 @@ def check_patterns(data):
     
     # at beginning define lengths and such to use for calculations later ---
         
-    # get percent change over past 5 days
+    # get percent change over past 14 days
     change = (data.iloc[99, 3] - data.iloc[85, 3]) / data.iloc[99, 3]
     
     # get median of candle lengths to define small and large candles
